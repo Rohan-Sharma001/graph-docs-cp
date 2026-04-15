@@ -1,0 +1,168 @@
+{
+  "version": "4.4.0",
+  "created": "2026-04-15T08:39:46Z",
+  "files": [
+    {
+      "path": ".nojekyll"
+    },
+    {
+      "path": "00-introduction/index.html"
+    },
+    {
+      "path": "01-basics/01-graph-representation/index.html"
+    },
+    {
+      "path": "01-basics/02-bfs/index.html"
+    },
+    {
+      "path": "01-basics/03-dfs/index.html"
+    },
+    {
+      "path": "01-basics/index.html"
+    },
+    {
+      "path": "02-core-patterns/01-connected-components/index.html"
+    },
+    {
+      "path": "02-core-patterns/02-cycle-detection/index.html"
+    },
+    {
+      "path": "02-core-patterns/03-bipartite-check/index.html"
+    },
+    {
+      "path": "02-core-patterns/04-grid-graphs/index.html"
+    },
+    {
+      "path": "02-core-patterns/05-multi-source-bfs/index.html"
+    },
+    {
+      "path": "02-core-patterns/index.html"
+    },
+    {
+      "path": "03-trees/01-tree-basics/index.html"
+    },
+    {
+      "path": "03-trees/02-tree-diameter/index.html"
+    },
+    {
+      "path": "03-trees/03-euler-tour/index.html"
+    },
+    {
+      "path": "03-trees/04-binary-lifting-lca/index.html"
+    },
+    {
+      "path": "03-trees/index.html"
+    },
+    {
+      "path": "04-shortest-paths/01-dijkstra/index.html"
+    },
+    {
+      "path": "04-shortest-paths/02-zero-one-bfs/index.html"
+    },
+    {
+      "path": "04-shortest-paths/03-bellman-ford/index.html"
+    },
+    {
+      "path": "04-shortest-paths/04-floyd-warshall/index.html"
+    },
+    {
+      "path": "04-shortest-paths/index.html"
+    },
+    {
+      "path": "05-dsu-and-mst/01-dsu/index.html"
+    },
+    {
+      "path": "05-dsu-and-mst/02-kruskal/index.html"
+    },
+    {
+      "path": "05-dsu-and-mst/03-prim/index.html"
+    },
+    {
+      "path": "05-dsu-and-mst/index.html"
+    },
+    {
+      "path": "06-directed-graphs/01-topological-sort/index.html"
+    },
+    {
+      "path": "06-directed-graphs/02-dag-dp/index.html"
+    },
+    {
+      "path": "06-directed-graphs/03-scc-kosaraju/index.html"
+    },
+    {
+      "path": "06-directed-graphs/04-functional-graphs/index.html"
+    },
+    {
+      "path": "06-directed-graphs/index.html"
+    },
+    {
+      "path": "07-advanced-connectivity/01-bridges/index.html"
+    },
+    {
+      "path": "07-advanced-connectivity/02-articulation-points/index.html"
+    },
+    {
+      "path": "07-advanced-connectivity/03-euler-path-circuit/index.html"
+    },
+    {
+      "path": "07-advanced-connectivity/index.html"
+    },
+    {
+      "path": "404.html"
+    },
+    {
+      "path": "CNAME"
+    },
+    {
+      "path": "index.html"
+    },
+    {
+      "path": "media/image.png"
+    },
+    {
+      "path": "resources/css/retype.css"
+    },
+    {
+      "path": "resources/fonts/Inter-italic-latin-var.woff2"
+    },
+    {
+      "path": "resources/fonts/Inter-roman-latin-var.woff2"
+    },
+    {
+      "path": "resources/js/config.js"
+    },
+    {
+      "path": "resources/js/lunr.js"
+    },
+    {
+      "path": "resources/js/prism.js"
+    },
+    {
+      "path": "resources/js/retype.js"
+    },
+    {
+      "path": "resources/js/search.json"
+    },
+    {
+      "path": "resources/lunr.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/mermaid.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/prism.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/retype.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/retype.LICENSE.txt"
+    },
+    {
+      "path": "robots.txt"
+    },
+    {
+      "path": "sitemap.xml.gz"
+    }
+  ]
+}
