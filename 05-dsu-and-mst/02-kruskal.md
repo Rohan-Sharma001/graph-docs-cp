@@ -6,6 +6,23 @@
 
 Finds a minimum spanning tree of a weighted undirected graph.
 
+## What MST means
+
+MST stands for **minimum spanning tree**.
+
+Break that into parts:
+
+- **spanning**: it includes all `n` vertices
+- **tree**: it is connected and has no cycle
+- **minimum**: among all spanning trees, its total edge weight is as small as
+  possible
+
+So in a connected graph, an MST is a way to connect every vertex using exactly
+`n - 1` edges with minimum total cost.
+
+If the graph is disconnected, a full spanning tree does not exist. In that
+case, Kruskal gives a minimum spanning **forest** instead.
+
 ## Core idea
 
 Sort edges by weight and greedily take an edge if it connects two different
@@ -20,6 +37,15 @@ Why? Because if you need to connect those two sides somehow, replacing a heavier
 crossing edge with a lighter one can only improve the answer.
 
 This is the cut-property intuition behind Kruskal.
+
+Another way to think about it:
+
+- we want all vertices connected in the end
+- we never want to create a cycle, because a tree cannot contain cycles
+- so we only take an edge when it joins two different components
+
+That is exactly why DSU fits Kruskal so well: it quickly tells us whether an
+edge connects two separate components or just creates a useless cycle.
 
 ## Template
 

@@ -34,10 +34,5 @@ roughly Codeforces `1800` level.
 - Core graph decomposition ideas such as SCC and bridge finding
 - Standard constructive algorithms like MST and Euler traversal
 
-## Not included yet
-
-- Max flow / min cut
-- Heavy-light decomposition
-- Centroid decomposition
-- Matching algorithms
-- DSU on tree
+## Not included
+- Proofs of Correctness 

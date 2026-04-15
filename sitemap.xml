@@ -1,143 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://docs.example.com/</loc>
+    <loc>https://rohan-sharma001.github.io/</loc>
+    <lastmod>2026-04-15T23:19:37Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rohan-sharma001.github.io/02-core-patterns/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/02-core-patterns/</loc>
+    <loc>https://rohan-sharma001.github.io/01-basics/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/03-trees/</loc>
+    <loc>https://rohan-sharma001.github.io/03-trees/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/01-basics/</loc>
+    <loc>https://rohan-sharma001.github.io/04-shortest-paths/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/04-shortest-paths/</loc>
+    <loc>https://rohan-sharma001.github.io/00-introduction/</loc>
+    <lastmod>2026-04-15T23:19:37Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rohan-sharma001.github.io/06-directed-graphs/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/06-directed-graphs/</loc>
+    <loc>https://rohan-sharma001.github.io/05-dsu-and-mst/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/05-dsu-and-mst/</loc>
+    <loc>https://rohan-sharma001.github.io/07-advanced-connectivity/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/07-advanced-connectivity/</loc>
+    <loc>https://rohan-sharma001.github.io/01-basics/02-bfs/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/00-introduction/</loc>
+    <loc>https://rohan-sharma001.github.io/01-basics/03-dfs/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/01-basics/02-bfs/</loc>
+    <loc>https://rohan-sharma001.github.io/00-introduction/01-types-and-terminology/</loc>
+    <lastmod>2026-04-15T23:19:37Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rohan-sharma001.github.io/02-core-patterns/02-cycle-detection/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/01-basics/03-dfs/</loc>
+    <loc>https://rohan-sharma001.github.io/01-basics/01-graph-representation/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/02-core-patterns/02-cycle-detection/</loc>
+    <loc>https://rohan-sharma001.github.io/02-core-patterns/03-bipartite-check/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/01-basics/01-graph-representation/</loc>
+    <loc>https://rohan-sharma001.github.io/02-core-patterns/04-grid-graphs/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/02-core-patterns/03-bipartite-check/</loc>
+    <loc>https://rohan-sharma001.github.io/02-core-patterns/05-multi-source-bfs/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/02-core-patterns/04-grid-graphs/</loc>
+    <loc>https://rohan-sharma001.github.io/02-core-patterns/01-connected-components/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/02-core-patterns/05-multi-source-bfs/</loc>
+    <loc>https://rohan-sharma001.github.io/03-trees/02-tree-diameter/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/02-core-patterns/01-connected-components/</loc>
+    <loc>https://rohan-sharma001.github.io/03-trees/03-euler-tour/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/03-trees/02-tree-diameter/</loc>
+    <loc>https://rohan-sharma001.github.io/03-trees/04-binary-lifting-lca/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/03-trees/03-euler-tour/</loc>
+    <loc>https://rohan-sharma001.github.io/03-trees/01-tree-basics/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/03-trees/04-binary-lifting-lca/</loc>
+    <loc>https://rohan-sharma001.github.io/04-shortest-paths/02-zero-one-bfs/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/03-trees/01-tree-basics/</loc>
+    <loc>https://rohan-sharma001.github.io/04-shortest-paths/03-bellman-ford/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/04-shortest-paths/02-zero-one-bfs/</loc>
+    <loc>https://rohan-sharma001.github.io/04-shortest-paths/04-floyd-warshall/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/04-shortest-paths/03-bellman-ford/</loc>
+    <loc>https://rohan-sharma001.github.io/04-shortest-paths/01-dijkstra/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/04-shortest-paths/04-floyd-warshall/</loc>
+    <loc>https://rohan-sharma001.github.io/05-dsu-and-mst/02-kruskal/</loc>
+    <lastmod>2026-04-15T23:19:37Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rohan-sharma001.github.io/05-dsu-and-mst/03-prim/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/04-shortest-paths/01-dijkstra/</loc>
+    <loc>https://rohan-sharma001.github.io/06-directed-graphs/02-dag-dp/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/05-dsu-and-mst/02-kruskal/</loc>
+    <loc>https://rohan-sharma001.github.io/05-dsu-and-mst/01-dsu/</loc>
+    <lastmod>2026-04-15T23:19:37Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rohan-sharma001.github.io/06-directed-graphs/03-scc-kosaraju/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/05-dsu-and-mst/03-prim/</loc>
+    <loc>https://rohan-sharma001.github.io/06-directed-graphs/04-functional-graphs/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/06-directed-graphs/02-dag-dp/</loc>
+    <loc>https://rohan-sharma001.github.io/06-directed-graphs/01-topological-sort/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/05-dsu-and-mst/01-dsu/</loc>
+    <loc>https://rohan-sharma001.github.io/07-advanced-connectivity/02-articulation-points/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/06-directed-graphs/03-scc-kosaraju/</loc>
+    <loc>https://rohan-sharma001.github.io/07-advanced-connectivity/01-bridges/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.example.com/06-directed-graphs/04-functional-graphs/</loc>
-    <lastmod>2026-04-15T14:33:47Z</lastmod>
-  </url>
-  <url>
-    <loc>https://docs.example.com/06-directed-graphs/01-topological-sort/</loc>
-    <lastmod>2026-04-15T14:33:47Z</lastmod>
-  </url>
-  <url>
-    <loc>https://docs.example.com/07-advanced-connectivity/02-articulation-points/</loc>
-    <lastmod>2026-04-15T14:33:47Z</lastmod>
-  </url>
-  <url>
-    <loc>https://docs.example.com/07-advanced-connectivity/03-euler-path-circuit/</loc>
-    <lastmod>2026-04-15T14:33:47Z</lastmod>
-  </url>
-  <url>
-    <loc>https://docs.example.com/07-advanced-connectivity/01-bridges/</loc>
+    <loc>https://rohan-sharma001.github.io/07-advanced-connectivity/03-euler-path-circuit/</loc>
     <lastmod>2026-04-15T14:33:47Z</lastmod>
   </url>
 </urlset>

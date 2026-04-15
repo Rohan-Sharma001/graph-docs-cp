@@ -2,59 +2,63 @@
 
 > This repo is a study path for graph algorithms from the absolute basics up to roughly Codeforces 1800 level.
 
-- [Graphs in Competitive Programming](https://docs.example.com/readme.md): Graphs in Competitive Programming
-- [01 Basics](https://docs.example.com/01-basics/readme.md): Target range: roughly 800-1100
-- [02 Core Patterns](https://docs.example.com/02-core-patterns/readme.md): Target range: roughly 1000-1300
-- [03 Trees](https://docs.example.com/03-trees/readme.md): Target range: roughly 1200-1500
-- [04 Shortest Paths](https://docs.example.com/04-shortest-paths/readme.md): Target range: roughly 1300-1700
-- [05 DSU and MST](https://docs.example.com/05-dsu-and-mst/readme.md): Target range: roughly 1400-1700
-- [06 Directed Graphs](https://docs.example.com/06-directed-graphs/readme.md): Target range: roughly 1500-1800
-- [07 Advanced Connectivity](https://docs.example.com/07-advanced-connectivity/readme.md): Target range: roughly 1700-1800
-- [00. TF is a graph?](https://docs.example.com/00-introduction/readme.md): In competitive programming, graphs are just a way to represent connections. We have nodes (things) and edges (relationships between those things).
+- [Graphs in Competitive Programming](https://rohan-sharma001.github.io/readme.md): Graphs in Competitive Programming
+- [00 Introduction](https://rohan-sharma001.github.io/00-introduction/readme.md): In competitive programming, graphs are just a way to represent connections. We have nodes (things) and edges (relationships between those things).
+- [01 Basics](https://rohan-sharma001.github.io/01-basics/readme.md): Target range: roughly 800-1100
+- [02 Core Patterns](https://rohan-sharma001.github.io/02-core-patterns/readme.md): Target range: roughly 1000-1300
+- [03 Trees](https://rohan-sharma001.github.io/03-trees/readme.md): Target range: roughly 1200-1500
+- [04 Shortest Paths](https://rohan-sharma001.github.io/04-shortest-paths/readme.md): Target range: roughly 1300-1700
+- [05 DSU and MST](https://rohan-sharma001.github.io/05-dsu-and-mst/readme.md): Target range: roughly 1400-1700
+- [06 Directed Graphs](https://rohan-sharma001.github.io/06-directed-graphs/readme.md): Target range: roughly 1500-1800
+- [07 Advanced Connectivity](https://rohan-sharma001.github.io/07-advanced-connectivity/readme.md): Target range: roughly 1700-1800
+
+## 00 Introduction
+
+- [1. Graph Types and Terminology](https://rohan-sharma001.github.io/00-introduction/01-types-and-terminology.md): Undirected graph: In an undirected graph the order in which nodes are connected doesn't matter. The example you saw above is an undirected graph. The order of cities doesn't change the fact whether they are connected or not.
 
 ## 01 Basics
 
-- [1. Graph Representation](https://docs.example.com/01-basics/01-graph-representation.md): Difficulty band: 800-1000
-- [2. Breadth First Search](https://docs.example.com/01-basics/02-bfs.md): Difficulty band: 800-1100
-- [3. Depth First Search](https://docs.example.com/01-basics/03-dfs.md): Difficulty band: 800-1100
+- [1. Graph Representation](https://rohan-sharma001.github.io/01-basics/01-graph-representation.md): Difficulty band: 800-1000
+- [2. Breadth First Search](https://rohan-sharma001.github.io/01-basics/02-bfs.md): Difficulty band: 800-1100
+- [3. Depth First Search](https://rohan-sharma001.github.io/01-basics/03-dfs.md): Difficulty band: 800-1100
 
 ## 02 Core Patterns
 
-- [1. Connected Components](https://docs.example.com/02-core-patterns/01-connected-components.md): Difficulty band: 1000-1200
-- [2. Cycle Detection](https://docs.example.com/02-core-patterns/02-cycle-detection.md): Difficulty band: 1100-1400
-- [3. Bipartite Check](https://docs.example.com/02-core-patterns/03-bipartite-check.md): Difficulty band: 1100-1300
-- [4. Grid Graphs](https://docs.example.com/02-core-patterns/04-grid-graphs.md): Difficulty band: 1000-1300
-- [5. Multi-Source BFS](https://docs.example.com/02-core-patterns/05-multi-source-bfs.md): Difficulty band: 1200-1400
+- [1. Connected Components](https://rohan-sharma001.github.io/02-core-patterns/01-connected-components.md): Difficulty band: 1000-1200
+- [2. Cycle Detection](https://rohan-sharma001.github.io/02-core-patterns/02-cycle-detection.md): Difficulty band: 1100-1400
+- [3. Bipartite Check](https://rohan-sharma001.github.io/02-core-patterns/03-bipartite-check.md): Difficulty band: 1100-1300
+- [4. Grid Graphs](https://rohan-sharma001.github.io/02-core-patterns/04-grid-graphs.md): Difficulty band: 1000-1300
+- [5. Multi-Source BFS](https://rohan-sharma001.github.io/02-core-patterns/05-multi-source-bfs.md): Difficulty band: 1200-1400
 
 ## 03 Trees
 
-- [1. Tree Basics](https://docs.example.com/03-trees/01-tree-basics.md): Difficulty band: 1200-1400
-- [2. Tree Diameter](https://docs.example.com/03-trees/02-tree-diameter.md): Difficulty band: 1300-1500
-- [3. Euler Tour on Trees](https://docs.example.com/03-trees/03-euler-tour.md): Difficulty band: 1400-1600
-- [4. Binary Lifting for LCA](https://docs.example.com/03-trees/04-binary-lifting-lca.md): Difficulty band: 1500-1800
+- [1. Tree Basics](https://rohan-sharma001.github.io/03-trees/01-tree-basics.md): Difficulty band: 1200-1400
+- [2. Tree Diameter](https://rohan-sharma001.github.io/03-trees/02-tree-diameter.md): Difficulty band: 1300-1500
+- [3. Euler Tour on Trees](https://rohan-sharma001.github.io/03-trees/03-euler-tour.md): Difficulty band: 1400-1600
+- [4. Binary Lifting for LCA](https://rohan-sharma001.github.io/03-trees/04-binary-lifting-lca.md): Difficulty band: 1500-1800
 
 ## 04 Shortest Paths
 
-- [1. Dijkstra](https://docs.example.com/04-shortest-paths/01-dijkstra.md): Difficulty band: 1400-1700
-- [2. 0-1 BFS](https://docs.example.com/04-shortest-paths/02-zero-one-bfs.md): Difficulty band: 1500-1700
-- [3. Bellman-Ford](https://docs.example.com/04-shortest-paths/03-bellman-ford.md): Difficulty band: 1600-1800
-- [4. Floyd-Warshall](https://docs.example.com/04-shortest-paths/04-floyd-warshall.md): Difficulty band: 1600-1800
+- [1. Dijkstra](https://rohan-sharma001.github.io/04-shortest-paths/01-dijkstra.md): Difficulty band: 1400-1700
+- [2. 0-1 BFS](https://rohan-sharma001.github.io/04-shortest-paths/02-zero-one-bfs.md): Difficulty band: 1500-1700
+- [3. Bellman-Ford](https://rohan-sharma001.github.io/04-shortest-paths/03-bellman-ford.md): Difficulty band: 1600-1800
+- [4. Floyd-Warshall](https://rohan-sharma001.github.io/04-shortest-paths/04-floyd-warshall.md): Difficulty band: 1600-1800
 
 ## 05 DSU and MST
 
-- [1. Disjoint Set Union](https://docs.example.com/05-dsu-and-mst/01-dsu.md): Difficulty band: 1300-1600
-- [2. Kruskal](https://docs.example.com/05-dsu-and-mst/02-kruskal.md): Difficulty band: 1400-1700
-- [3. Prim](https://docs.example.com/05-dsu-and-mst/03-prim.md): Difficulty band: 1500-1700
+- [1. Disjoint Set Union](https://rohan-sharma001.github.io/05-dsu-and-mst/01-dsu.md): Difficulty band: 1300-1600
+- [2. Kruskal](https://rohan-sharma001.github.io/05-dsu-and-mst/02-kruskal.md): Difficulty band: 1400-1700
+- [3. Prim](https://rohan-sharma001.github.io/05-dsu-and-mst/03-prim.md): Difficulty band: 1500-1700
 
 ## 06 Directed Graphs
 
-- [1. Topological Sort](https://docs.example.com/06-directed-graphs/01-topological-sort.md): Difficulty band: 1400-1700
-- [2. DAG DP](https://docs.example.com/06-directed-graphs/02-dag-dp.md): Difficulty band: 1500-1800
-- [3. Strongly Connected Components](https://docs.example.com/06-directed-graphs/03-scc-kosaraju.md): Difficulty band: 1700-1800
-- [4. Functional Graphs](https://docs.example.com/06-directed-graphs/04-functional-graphs.md): Difficulty band: 1600-1800
+- [1. Topological Sort](https://rohan-sharma001.github.io/06-directed-graphs/01-topological-sort.md): Difficulty band: 1400-1700
+- [2. DAG DP](https://rohan-sharma001.github.io/06-directed-graphs/02-dag-dp.md): Difficulty band: 1500-1800
+- [3. Strongly Connected Components](https://rohan-sharma001.github.io/06-directed-graphs/03-scc-kosaraju.md): Difficulty band: 1700-1800
+- [4. Functional Graphs](https://rohan-sharma001.github.io/06-directed-graphs/04-functional-graphs.md): Difficulty band: 1600-1800
 
 ## 07 Advanced Connectivity
 
-- [1. Bridges](https://docs.example.com/07-advanced-connectivity/01-bridges.md): Difficulty band: 1700-1800
-- [2. Articulation Points](https://docs.example.com/07-advanced-connectivity/02-articulation-points.md): Difficulty band: 1700-1800
-- [3. Euler Path and Circuit](https://docs.example.com/07-advanced-connectivity/03-euler-path-circuit.md): Difficulty band: 1600-1800
+- [1. Bridges](https://rohan-sharma001.github.io/07-advanced-connectivity/01-bridges.md): Difficulty band: 1700-1800
+- [2. Articulation Points](https://rohan-sharma001.github.io/07-advanced-connectivity/02-articulation-points.md): Difficulty band: 1700-1800
+- [3. Euler Path and Circuit](https://rohan-sharma001.github.io/07-advanced-connectivity/03-euler-path-circuit.md): Difficulty band: 1600-1800

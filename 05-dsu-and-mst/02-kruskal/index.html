@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829559496365">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829590622726">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -15,12 +15,12 @@
     <meta name="description" content="Difficulty band: 1400-1700">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.example.com/05-dsu-and-mst/02-kruskal/">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.example.com/sitemap.xml">
+    <link rel="canonical" href="https://rohan-sharma001.github.io/05-dsu-and-mst/02-kruskal/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://rohan-sharma001.github.io/sitemap.xml">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.example.com/05-dsu-and-mst/02-kruskal/">
+    <meta property="og:url" content="https://rohan-sharma001.github.io/05-dsu-and-mst/02-kruskal/">
     <meta property="og:title" content="2. Kruskal">
     <meta property="og:description" content="Difficulty band: 1400-1700">
     <meta property="og:site_name" content="Graphs in CP">
@@ -28,21 +28,21 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://docs.example.com/05-dsu-and-mst/02-kruskal/">
+    <meta name="twitter:url" content="https://rohan-sharma001.github.io/05-dsu-and-mst/02-kruskal/">
     <meta name="twitter:title" content="2. Kruskal">
     <meta name="twitter:description" content="Difficulty band: 1400-1700">
 
     <!-- Alternate Markdown -->
-    <link rel="alternate" type="text/markdown" href="https://docs.example.com/05-dsu-and-mst/02-kruskal.md">
+    <link rel="alternate" type="text/markdown" href="https://rohan-sharma001.github.io/05-dsu-and-mst/02-kruskal.md">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.5.3.829559496365" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.5.3.829590622726" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.829559496365" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.829590622726" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.829559496365" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.3.829559496365" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.829590622726" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.3.829590622726" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -57,7 +57,7 @@
             <!-- Logo -->
             <div class="flex items-center justify-between h-full py-2 md:w-75">
                 <div class="flex items-center px-2 md:px-6">
-                    <a id="retype-branding-logo" href="https://docs.example.com/" class="flex items-center leading-snug text-2xl">
+                    <a id="retype-branding-logo" href="https://rohan-sharma001.github.io/" class="flex items-center leading-snug text-2xl">
                         <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Graphs in CP</span>
                     </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Docs</span>
                 </div>
@@ -158,6 +158,19 @@
 <p><strong>Difficulty band:</strong> <code translate="no" v-pre>1400-1700</code></p>
 <h2 id="what-it-solves">What it solves</h2>
 <p>Finds a minimum spanning tree of a weighted undirected graph.</p>
+<h2 id="what-mst-means">What MST means</h2>
+<p>MST stands for <strong>minimum spanning tree</strong>.</p>
+<p>Break that into parts:</p>
+<ul>
+<li><strong>spanning</strong>: it includes all <code translate="no" v-pre>n</code> vertices</li>
+<li><strong>tree</strong>: it is connected and has no cycle</li>
+<li><strong>minimum</strong>: among all spanning trees, its total edge weight is as small as
+possible</li>
+</ul>
+<p>So in a connected graph, an MST is a way to connect every vertex using exactly
+<code translate="no" v-pre>n - 1</code> edges with minimum total cost.</p>
+<p>If the graph is disconnected, a full spanning tree does not exist. In that
+case, Kruskal gives a minimum spanning <strong>forest</strong> instead.</p>
 <h2 id="core-idea">Core idea</h2>
 <p>Sort edges by weight and greedily take an edge if it connects two different
 components.</p>
@@ -167,6 +180,14 @@ edge that connects two different components is always a safe choice.</p>
 <p>Why? Because if you need to connect those two sides somehow, replacing a heavier
 crossing edge with a lighter one can only improve the answer.</p>
 <p>This is the cut-property intuition behind Kruskal.</p>
+<p>Another way to think about it:</p>
+<ul>
+<li>we want all vertices connected in the end</li>
+<li>we never want to create a cycle, because a tree cannot contain cycles</li>
+<li>so we only take an edge when it joins two different components</li>
+</ul>
+<p>That is exactly why DSU fits Kruskal so well: it quickly tells us whether an
+edge connects two separate components or just creates a useless cycle.</p>
 <h2 id="template">Template</h2>
 <div id="template-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-cpp"><code v-pre class="language-cpp">sort(edges.begin(), edges.end(), [&amp;](auto a, auto b) {
@@ -241,7 +262,7 @@ lightest edge across a cut is safe to include in at least one MST.</p>
                     <ul class="flex flex-wrap items-center text-sm">
                     </ul>
                 </div>
-                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026. All rights reserved.</p></div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>Amongus</p></div>
             </footer>
         </div>
     </div>
