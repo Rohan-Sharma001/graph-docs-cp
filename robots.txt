@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rohan-sharma001.github.io/sitemap.xml
+Sitemap: https://rohan-sharma001.github.io/graph-docs-cp/sitemap.xml
