@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.829557583668">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.829574531095">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.4.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.4.0.829557583668" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.4.0.829574531095" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.4.0.829557583668" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.4.0.829574531095" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.4.0.829557583668" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.4.0.829557583668" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.4.0.829574531095" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.4.0.829574531095" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -152,6 +152,19 @@
 <p><strong>Difficulty band:</strong> <code translate="no" v-pre>1400-1700</code></p>
 <h2 id="what-it-solves">What it solves</h2>
 <p>Finds a minimum spanning tree of a weighted undirected graph.</p>
+<h2 id="what-mst-means">What MST means</h2>
+<p>MST stands for <strong>minimum spanning tree</strong>.</p>
+<p>Break that into parts:</p>
+<ul>
+<li><strong>spanning</strong>: it includes all <code translate="no" v-pre>n</code> vertices</li>
+<li><strong>tree</strong>: it is connected and has no cycle</li>
+<li><strong>minimum</strong>: among all spanning trees, its total edge weight is as small as
+possible</li>
+</ul>
+<p>So in a connected graph, an MST is a way to connect every vertex using exactly
+<code translate="no" v-pre>n - 1</code> edges with minimum total cost.</p>
+<p>If the graph is disconnected, a full spanning tree does not exist. In that
+case, Kruskal gives a minimum spanning <strong>forest</strong> instead.</p>
 <h2 id="core-idea">Core idea</h2>
 <p>Sort edges by weight and greedily take an edge if it connects two different
 components.</p>
@@ -161,6 +174,14 @@ edge that connects two different components is always a safe choice.</p>
 <p>Why? Because if you need to connect those two sides somehow, replacing a heavier
 crossing edge with a lighter one can only improve the answer.</p>
 <p>This is the cut-property intuition behind Kruskal.</p>
+<p>Another way to think about it:</p>
+<ul>
+<li>we want all vertices connected in the end</li>
+<li>we never want to create a cycle, because a tree cannot contain cycles</li>
+<li>so we only take an edge when it joins two different components</li>
+</ul>
+<p>That is exactly why DSU fits Kruskal so well: it quickly tells us whether an
+edge connects two separate components or just creates a useless cycle.</p>
 <h2 id="template">Template</h2>
 <div id="template-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-cpp"><code v-pre class="language-cpp">sort(edges.begin(), edges.end(), [&amp;](auto a, auto b) {

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.829557583668">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.829574531095">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>1. TF is a graph?</title>
-    <meta name="title" content="1. TF is a graph?">
+    <title>00 Introduction</title>
+    <meta name="title" content="00 Introduction">
     <meta name="description" content="In competitive programming, graphs are just a way to represent connections. We have nodes (things) and edges (relationships between those things).">
 
     <!-- Canonical -->
@@ -20,30 +20,30 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.example.com/00-introduction/">
-    <meta property="og:title" content="1. TF is a graph?">
+    <meta property="og:title" content="00 Introduction">
     <meta property="og:description" content="In competitive programming, graphs are just a way to represent connections. We have nodes (things) and edges (relationships between those things).">
     <meta property="og:image" content="https://docs.example.com/media/image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="1. TF is a graph?">
+    <meta property="og:image:alt" content="00 Introduction">
     <meta property="og:site_name" content="Graphs in CP">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.example.com/00-introduction/">
-    <meta name="twitter:title" content="1. TF is a graph?">
+    <meta name="twitter:title" content="00 Introduction">
     <meta name="twitter:description" content="In competitive programming, graphs are just a way to represent connections. We have nodes (things) and edges (relationships between those things).">
     <meta name="twitter:image" content="https://docs.example.com/media/image.png">
-    <meta name="twitter:image:alt" content="1. TF is a graph?">
+    <meta name="twitter:image:alt" content="00 Introduction">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../resources/css/retype.css?v=4.4.0.829557583668" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.4.0.829574531095" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.4.0.829557583668" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.4.0.829574531095" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.4.0.829557583668" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.4.0.829574531095" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -153,7 +153,8 @@
                 <!-- Rendered if sidebar right is enabled -->
                 <div id="retype-sidebar-right-toggle"></div>
                 <!-- Page content  -->
-<h1 id="1-tf-is-a-graph">1. TF is a graph?</h1>
+<h1 id="00-introduction">00 Introduction</h1>
+<h2 id="what-is-a-graph">What is a graph?</h2>
 <p>In competitive programming, graphs are just a way to represent
 <strong>connections</strong>. We have <strong>nodes</strong> (things) and <strong>edges</strong> (relationships
 between those things).</p>
@@ -181,72 +182,9 @@ In this diagram each node represents a city and edge between two nodes exists <s
 This makes it easy to visualise the connection and do any required operations. Want to find the minimum distance between two cites? Easy. Want to find the city that can serve as a hub? No problem.</p>
     </div>
 </div>
-<h3 id="types-of-graphs">Types of graphs</h3>
-<h4 id="based-on-edge-direction">Based on edge direction</h4>
+<h2 id="in-this-section">In This Section</h2>
 <ul>
-<li><strong>Undirected graph</strong>: In an undirected graph the order in which nodes are connected doesn&#x27;t matter. The example you saw above is an undirected graph. The order of cities doesn&#x27;t change the fact whether they are connected or not.</li>
-<li><strong>Directed graph</strong>: Here order of nodes matters. If we want to represent a family tree we can use an arrow from one node to another if the latter is the child of the former.</li>
-</ul>
-<h4 id="based-on-edge-weights">Based on edge weights</h4>
-<ul>
-<li><strong>Weighted graph</strong>: Each edge may have an associated cost. Length of the edge is one way to represent it. Maps use weighted graphs under the hood to represent distance between two places.</li>
-<li><strong>Unweighted graph</strong>: A graph in which all edges are treated equally, usually with weight <code translate="no" v-pre>1</code>.</li>
-</ul>
-<h4 id="based-on-structure-or-special-property">Based on structure or special property</h4>
-<ul>
-<li><strong>Simple graph</strong>: A graph with no self-loops and no multiple edges between the same pair of vertices.</li>
-<li><strong>Multigraph</strong>: A graph that may contain multiple edges between the same pair of vertices.</li>
-<li><strong>Complete graph</strong>: A graph in which every pair of distinct vertices is connected by an edge.</li>
-<li><strong>Bipartite graph</strong>: A graph whose vertices can be divided into two sets such that every edge joins a vertex from one set to the other.
-<ul>
-<li><strong>Complete bipartite graph</strong>: A bipartite graph where every vertex of one set is connected to every vertex of the other set.</li>
-</ul>
-</li>
-<li><strong>Tree</strong>: A connected acyclic undirected graph.</li>
-<li><strong>Forest</strong>: A collection of one or more disjoint trees, or equivalently an acyclic undirected graph.</li>
-<li><strong>Directed Acyclic Graph(DAG)</strong>: A directed graph with no directed cycles.</li>
-<li><strong>Regular graph</strong>: A graph in which all vertices have the same degree.</li>
-</ul>
-<h4 id="based-on-connectivity-or-cycles">Based on connectivity or cycles</h4>
-<ul>
-<li><strong>Connected graph</strong>: In an undirected graph, every vertex is reachable from every other vertex.</li>
-<li><strong>Disconnected graph</strong>: A graph that is not connected.</li>
-<li><strong>Strongly connected graph</strong>: In a directed graph, every vertex is reachable from every other vertex by following edge directions.</li>
-<li><strong>Weakly connected graph</strong>: A directed graph that becomes connected if we ignore edge directions.</li>
-<li><strong>Cyclic graph</strong>: A graph in which at least one cycle exists.</li>
-<li><strong>Acyclic graph</strong>: A graph in which no cycle exists.</li>
-</ul>
-<h4 id="based-on-number-of-edges">Based on number of edges</h4>
-<ul>
-<li><strong>Sparse graph</strong>: A graph with relatively few edges compared to the maximum possible number of edges.</li>
-<li><strong>Dense graph</strong>: A graph with an edge count close to the maximum possible number of edges.</li>
-</ul>
-<h3 id="characteristics-of-graphs">Characteristics of graphs</h3>
-<ul>
-<li><strong>Order of graph</strong>: Defined as the number of vertices present in the graph.</li>
-<li><strong>Size of graph</strong>: Defined as the number of edges present in the graph.</li>
-<li><strong>Degree(of vertex)</strong>: Defined as the number of edges incident on a given vertex in an undirected graph.
-<ul>
-<li><strong>Indegree</strong>: Number of incoming edges to a vertex in a directed graph.</li>
-<li><strong>Outdegree</strong>: Number of outgoing edges from a vertex in a directed graph.</li>
-<li><strong>Isolated vertex</strong>: A vertex with degree <code translate="no" v-pre>0</code>.</li>
-<li><strong>Leaf / Pendant vertex</strong>: A vertex with degree <code translate="no" v-pre>1</code> in an undirected graph.</li>
-</ul>
-</li>
-<li><strong>Subgraph</strong>: From the original graph take some of the vertices. If an edge connects vertices that aren&#x27;t included, remove it. Then remove some(or none or all) of the remaining edges.</li>
-<li><strong>Walk</strong>: Sequence of vertices where each consecutive pair is connected by an edge. Vertices and edges may repeat.</li>
-<li><strong>Trail</strong>: A walk in which no edge is repeated.</li>
-<li><strong>Path</strong>: Sequence of vertices where each vertex is connected to the next vertex. In a simple path all vertices are distinct.</li>
-<li><strong>Cycle</strong>: A path where the first and last vertices are the same.</li>
-<li><strong>Connected component</strong>: A maximal connected subgraph.</li>
-<li><strong>Self-loop</strong>: An edge that starts and ends at the same vertex.</li>
-<li><strong>Parallel edges</strong>: Two or more edges connecting the same pair of vertices.</li>
-<li><strong>Bridge / Cut-edge</strong>: An edge whose removal increases the number of connected components of the graph.</li>
-<li><strong>Articulation point / Cut-vertex</strong>: A vertex whose removal increases the number of connected components of the graph.</li>
-<li><strong>Euler path</strong>: A path that uses every edge exactly once.</li>
-<li><strong>Euler circuit</strong>: A cycle that uses every edge exactly once.</li>
-<li><strong>Hamiltonian path</strong>: A path that visits every vertex exactly once.</li>
-<li><strong>Hamiltonian cycle</strong>: A cycle that visits every vertex exactly once and returns to the starting vertex.</li>
+<li><a href="01-types-and-terminology/">Graph Types and Terminology</a></li>
 </ul>
 
                 
@@ -257,16 +195,23 @@ This makes it easy to visualise the connection and do any required operations. W
             
                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                     <div class="w-1/2">
-                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../07-advanced-connectivity/03-euler-path-circuit/">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../">
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                             <span>
                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                <span class="block mt-1">3. Euler Path and Circuit</span>
+                                <span class="block mt-1">Graphs in Competitive Programming</span>
                             </span>
                         </a>
                     </div>
             
                     <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../00-introduction/01-types-and-terminology/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">1. Graph Types and Terminology</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
                     </div>
                 </nav>
             </footer>
@@ -307,6 +252,6 @@ This makes it easy to visualise the connection and do any required operations. W
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "1. TF is a graph?", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "00 Introduction", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

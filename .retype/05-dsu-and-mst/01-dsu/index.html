@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.829557583668">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.829574531095">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.4.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.4.0.829557583668" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.4.0.829574531095" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.4.0.829557583668" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.4.0.829574531095" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.4.0.829557583668" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.4.0.829557583668" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.4.0.829574531095" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.4.0.829574531095" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -151,7 +151,13 @@
 <h1 id="1-disjoint-set-union">1. Disjoint Set Union</h1>
 <p><strong>Difficulty band:</strong> <code translate="no" v-pre>1300-1600</code></p>
 <h2 id="what-it-solves">What it solves</h2>
-<p>Maintains a partition of vertices into components while edges are added.</p>
+<p>Maintains which vertices currently belong to the same connected component while
+connections are only added over time.</p>
+<p>This is useful when you keep merging groups and want to quickly answer:</p>
+<ul>
+<li>are <code translate="no" v-pre>u</code> and <code translate="no" v-pre>v</code> already in the same group?</li>
+<li>if I connect <code translate="no" v-pre>u</code> and <code translate="no" v-pre>v</code>, does that merge two different groups?</li>
+</ul>
 <h2 id="intuition">Intuition</h2>
 <p>DSU treats each component as a rooted tree whose root is the component
 representative.</p>
@@ -161,11 +167,30 @@ representative.</p>
 </ul>
 <p>The magic is that path compression and union by size keep these trees extremely
 flat in practice.</p>
+<p>You can think of it as a very compact way to store components:</p>
+<ul>
+<li>each node points upward through <code translate="no" v-pre>p[x]</code></li>
+<li>the root is the representative of that whole component</li>
+<li>two nodes are in the same component exactly when their representatives match</li>
+</ul>
+<p>DSU does <strong>not</strong> store the full graph structure. It only stores enough
+information to know which nodes have been merged together.</p>
 <h2 id="core-operations">Core operations</h2>
 <ul>
 <li><code translate="no" v-pre>find(x)</code>: returns the representative of the component of <code translate="no" v-pre>x</code></li>
 <li><code translate="no" v-pre>unite(a, b)</code>: merges the two components if they are different</li>
 </ul>
+<p>In practice, checking whether two nodes are connected is just:</p>
+<div id="core-operations-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-cpp"><code v-pre class="language-cpp">find(a) == find(b)</code></pre>
+</doc-codeblock></div>
+<h2 id="what-state-this-implementation-stores">What state this implementation stores</h2>
+<ul>
+<li><code translate="no" v-pre>p[x]</code>: parent of <code translate="no" v-pre>x</code> in the DSU forest; if <code translate="no" v-pre>p[x] == x</code>, then <code translate="no" v-pre>x</code> is a root</li>
+<li><code translate="no" v-pre>sz[x]</code>: size of the component whose root is <code translate="no" v-pre>x</code></li>
+</ul>
+<p>Only roots have meaningful component sizes. After merging, the losing root no
+longer represents a component.</p>
 <h2 id="template">Template</h2>
 <div id="template-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-cpp"><code v-pre class="language-cpp">struct DSU {
@@ -193,6 +218,69 @@ flat in practice.</p>
     }
 };</code></pre>
 </doc-codeblock></div>
+<h2 id="what-the-template-is-actually-doing">What the template is actually doing</h2>
+<h3 id="1-constructor">1. Constructor</h3>
+<div id="1-constructor-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-cpp"><code v-pre class="language-cpp">DSU(int n) {
+    p.resize(n + 1);
+    sz.assign(n + 1, 1);
+    iota(p.begin(), p.end(), 0);
+}</code></pre>
+</doc-codeblock></div>
+<p>Initially every vertex is alone:</p>
+<ul>
+<li><code translate="no" v-pre>p[x] = x</code>: every node is its own representative</li>
+<li><code translate="no" v-pre>sz[x] = 1</code>: every component has size <code translate="no" v-pre>1</code></li>
+</ul>
+<p>So before any merges, the components are <code translate="no" v-pre>{1}</code>, <code translate="no" v-pre>{2}</code>, <code translate="no" v-pre>{3}</code>, ...</p>
+<h3 id="2-findx">2. <code translate="no" v-pre>find(x)</code></h3>
+<div id="2-findx-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-cpp"><code v-pre class="language-cpp">int find(int x) {
+    if (p[x] == x) return x;
+    return p[x] = find(p[x]);
+}</code></pre>
+</doc-codeblock></div>
+<p>This walks from <code translate="no" v-pre>x</code> to the root of its component and returns that root.</p>
+<p>The line</p>
+<div id="2-findx-code-2" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-cpp"><code v-pre class="language-cpp">p[x] = find(p[x]);</code></pre>
+</doc-codeblock></div>
+<p>is path compression. It rewires <code translate="no" v-pre>x</code> to point directly to the root, making later
+queries faster.</p>
+<h3 id="3-unitea-b">3. <code translate="no" v-pre>unite(a, b)</code></h3>
+<div id="3-unitea-b-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-cpp"><code v-pre class="language-cpp">bool unite(int a, int b) {
+    a = find(a);
+    b = find(b);
+    if (a == b) return false;
+    if (sz[a] &lt; sz[b]) swap(a, b);
+    p[b] = a;
+    sz[a] += sz[b];
+    return true;
+}</code></pre>
+</doc-codeblock></div>
+<p>This first converts <code translate="no" v-pre>a</code> and <code translate="no" v-pre>b</code> into their component representatives.</p>
+<p>Then:</p>
+<ul>
+<li>if the representatives are equal, both nodes are already in the same
+component, so nothing changes</li>
+<li>otherwise, attach the smaller component under the bigger one</li>
+<li>update the new root&#x27;s size</li>
+</ul>
+<p>The return value tells you whether a merge actually happened:</p>
+<ul>
+<li><code translate="no" v-pre>true</code>: two different components were merged</li>
+<li><code translate="no" v-pre>false</code>: they were already in the same component</li>
+</ul>
+<h2 id="small-example">Small example</h2>
+<p>Suppose we start with <code translate="no" v-pre>1, 2, 3, 4</code> as separate components.</p>
+<ol>
+<li><code translate="no" v-pre>unite(1, 2)</code> merges <code translate="no" v-pre>{1}</code> and <code translate="no" v-pre>{2}</code></li>
+<li><code translate="no" v-pre>unite(3, 4)</code> merges <code translate="no" v-pre>{3}</code> and <code translate="no" v-pre>{4}</code></li>
+<li><code translate="no" v-pre>unite(2, 4)</code> merges those two larger components</li>
+</ol>
+<p>After that, all four nodes have the same representative, so they are in one
+component.</p>
 <h2 id="complexity">Complexity</h2>
 <p>Almost constant per operation in practice, usually written as <code translate="no" v-pre>O(alpha(n))</code>.</p>
 <h2 id="why-path-compression-helps">Why path compression helps</h2>
@@ -206,6 +294,14 @@ chains from becoming long in the first place.</p>
 <li>Dynamic connectivity with only additions</li>
 <li>Kruskal&#x27;s algorithm</li>
 <li>Grouping equal or linked items</li>
+</ul>
+<h2 id="what-dsu-is-not-doing">What DSU is not doing</h2>
+<ul>
+<li>It is not storing adjacency lists or all edges</li>
+<li>It is not finding shortest paths or traversing the graph</li>
+<li>It is not good for edge deletions</li>
+<li>It does not directly list all vertices in a component unless you maintain that
+separately</li>
 </ul>
 <h2 id="important-limitation">Important limitation</h2>
 <p>Plain DSU does not support deleting edges or answering historical versions by

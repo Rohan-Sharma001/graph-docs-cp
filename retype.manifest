@@ -1,9 +1,12 @@
 {
   "version": "4.4.0",
-  "created": "2026-04-15T08:39:46Z",
+  "created": "2026-04-15T13:22:14Z",
   "files": [
     {
       "path": ".nojekyll"
+    },
+    {
+      "path": "00-introduction/01-types-and-terminology/index.html"
     },
     {
       "path": "00-introduction/index.html"

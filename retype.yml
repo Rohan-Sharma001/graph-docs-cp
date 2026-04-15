@@ -1,7 +1,7 @@
 input: .
 output: .retype
 
-url: docs.example.com # Use your website address here
+url: rohan-sharma001.github.io # Use your website address here
 
 start:
   # Uncomment the next line to try Retype Pro features
@@ -18,4 +18,4 @@ links:
     link: "00 Introduction/README.md"
 
 footer:
-  copyright: "&copy; Copyright {{ year }}. All rights reserved."
+  copyright: "Amongus"
